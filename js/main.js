@@ -1,44 +1,15 @@
-$(document).ready(function(){
-  init();
-
-  // setInterval(function(){
-  //   $('.squares-container').html("");
-  //   init();
-  // },1500)
-});
-
 function init(){
 
   global = {};
-  global.numOfSquares = 64;
-
-  global.lines = [
-    "BrokenStraightHor",
-    "BrokenStraightVert",
-    "LargeArc1",
-    "LargeArc2",
-    "LargeArc3",
-    "LargeArc4",
-    "NotStraightHor_A",
-    "NotStraightHor_B",
-    "NotStraightVert_A",
-    "NotStraightVert_B",
-    "SmallArc1",
-    "SmallArc2",
-    "SmallArc3",
-    "SmallArc4",
-    "StraightHor",
-    "StraightVert"
-  ];
-
-  global.clonedlines = [];
+  global.numOfSquares = 24;
+  setLinesArray();
 
   var html = "";
 
   //Create Squares with Two Strokes in each
   for(var i = 0; i < global.numOfSquares; i++){
 
-    html +=  "<div class='square'>";
+    html +=  "<div class='square' id='" + i + "'>";
     html +=  makePattern();
     html +=  "</div>";
 
@@ -46,6 +17,23 @@ function init(){
 
     html = "";
   }
+
+  initInteractions();
+
+}
+
+function initInteractions(){
+
+  $('.square').click(function(e){
+    $(e.target).html( makePattern() );
+    $(e.target).addClass( "SinkAndPop" );
+
+    setTimeout(function(){
+      $(e.target).removeClass( "SinkAndPop" );
+    },600)
+
+
+  });
 
 }
 
@@ -56,11 +44,9 @@ function makePattern(){
   var firstPattern = global.lines.pop();
   var secondPattern = global.lines.pop();
 
-  console.log(firstPattern, secondPattern);
-
   var string = "<div class='layer " + firstPattern + "'></div> <div class='layer " + secondPattern + "'></div>";
 
-  resetLinesArray();
+  setLinesArray();
 
   return string;
 }
@@ -87,7 +73,7 @@ function shuffle(array) {
   return array;
 }
 
-function resetLinesArray(){
+function setLinesArray(){
   global.lines = [
     "BrokenStraightHor",
     "BrokenStraightVert",
@@ -107,3 +93,7 @@ function resetLinesArray(){
     "StraightVert"
   ];
 }
+
+$(document).ready(function(){
+  init();
+});
