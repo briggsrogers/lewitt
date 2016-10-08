@@ -1,0 +1,207 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    background-image: url(../img/darkbg_@2X.png);
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.main {
+    padding: 30px;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+
+/* Brian's custom styles
+   ========================================================================== */
+
+.squares-container{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.square{
+  float: left;
+  position: relative;
+  height: 150px;
+  width: 150px;
+}
+
+.layer{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.BrokenStraightHor{ background-image: url( "../img/lines/BrokenStraightHor.svg") }
+.BrokenStraightVert{ background-image: url( "../img/lines/BrokenStraightVert.svg") }
+.Diag1{ background-image: url( "../img/lines/Diag1.svg") }
+.Diag2{ background-image: url( "../img/lines/Diag2.svg") }
+.LargeArc1{ background-image: url( "../img/lines/LargeArc1.svg") }
+.LargeArc2{ background-image: url( "../img/lines/LargeArc2.svg") }
+.LargeArc3{ background-image: url( "../img/lines/LargeArc3.svg") }
+.LargeArc4{ background-image: url( "../img/lines/LargeArc4.svg") }
+.NotStraightHor_A{ background-image: url( "../img/lines/NotStraightHor_A.svg") }
+.NotStraightHor_B{ background-image: url( "../img/lines/NotStraightHor_B.svg") }
+.NotStraightVert_A{ background-image: url( "../img/lines/NotStraightVert_A.svg") }
+.NotStraightVert_B{ background-image: url( "../img/lines/NotStraightVert_B.svg") }
+.SmallArc1{ background-image: url( "../img/lines/SmallArc1.svg") }
+.SmallArc2{ background-image: url( "../img/lines/SmallArc2.svg") }
+.SmallArc3{ background-image: url( "../img/lines/SmallArc3.svg") }
+.SmallArc4{ background-image: url( "../img/lines/SmallArc4.svg") }
+.StraightHor{ background-image: url( "../img/lines/StraightHor.svg") }
+.StraightVert{ background-image: url( "../img/lines/StraightVert.svg") }
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
